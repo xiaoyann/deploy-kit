@@ -1,0 +1,25 @@
+{
+  "name": "ftp-deploy",
+  "version": "1.0.0",
+  "description": "ftp deploy",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoyann/ftp-deploy.git"
+  },
+  "keywords": [
+    "deploy",
+    "ftp"
+  ],
+  "author": "xiaoyann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiaoyann/ftp-deploy/issues"
+  },
+  "homepage": "https://github.com/xiaoyann/ftp-deploy#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "ftp": "^0.3.10"
+  }
+}
