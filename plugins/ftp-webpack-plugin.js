@@ -1,5 +1,5 @@
 var path = require('path');
-var Deploy = require('./deploy');
+var Deploy = require('../lib/ftp');
 
 /**
  * conf 账号配置
