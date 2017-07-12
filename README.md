@@ -10,7 +10,7 @@ yarn add deploy-kit --dev
 
 * 基本用法 [最佳实战](./examples/basic)
 
-```
+```js
 const path = require('path')
 const Client = require('deploy-kit/lib/scp2')
 const client = new Client()
@@ -54,8 +54,8 @@ client.config(...)
 const webpackConfig = {
   ...
   plugins: [
-    // 将工具实例后传给 webpack-plugin
-    // 插件会在自动调用 client.upload 进行上传
+    // 将工具实例传给 webpack-plugin
+    // 插件会自动调用 client.upload 进行上传
     new DeployPlugin(client)
   ]
 }
