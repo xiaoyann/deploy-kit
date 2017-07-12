@@ -8,7 +8,7 @@ yarn add deploy-kit --dev
 
 ## 使用 sftp 部署文件
 
-- [x] 第一步 创建工具实例，并设置好相关配置
+* 基本用法 [最佳实战](./examples/basic)
 
 ```
 const path = require('path')
@@ -26,9 +26,11 @@ client.connect({
 client.config({
   // 需要上传的文件的根路径
   root: path.resolve(__dirname, '../dist')
-  // 要上传的文件
+  // 要上传的文件匹配规则，更多规则： glob(https://github.com/isaacs/node-glob#glob-primer)
+  // 支持数组形式：files: ['*.js', '*.css']
   files: '**',
-  // 忽略文件
+  // 忽略文件的匹配规则，支持数组形式
+  // 更多规则： glob(https://github.com/isaacs/node-glob#glob-primer)
   ignore: 'dist/**/*.map',
   // 文件在远程服务器上的存放路径
   remoteDir: '/data1/htdocs/test-app'
@@ -38,10 +40,16 @@ client.config({
 client.upload()
 ```
 
-- [x] 结合 webpack
+* 结合 webpack [最佳实战](./examples/webpack)
 
 ```js
+const Client = require('deploy-kit/lib/scp2')
+const client = new Client()
 const DeployPlugin = require('deploy-kit/plugins/webpack-plugin')
+
+client.connect(...)
+
+client.config(...)
 
 const webpackConfig = {
   ...
