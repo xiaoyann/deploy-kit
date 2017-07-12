@@ -1,7 +1,7 @@
 {
   "name": "deploy-kit",
-  "version": "1.0.4",
-  "description": "deploy files to a server",
+  "version": "2.1.2",
+  "description": "支持 ftp, sftp 等多种文件传输方式的文件部署工具。可以单独使用，也可以与 webpack, gulp 等工具集成，已内置 webpack, gulp 插件",
   "scripts": {},
   "repository": "git+https://github.com/xiaoyann/deploy-kit.git",
   "keywords": [
@@ -11,6 +11,10 @@
     "scp2",
     "sftp",
     "upload"
+  ],
+  "files": [
+    "lib",
+    "plugins"
   ],
   "author": "xiaoyann",
   "license": "MIT",
