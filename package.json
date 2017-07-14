@@ -2,7 +2,10 @@
   "name": "deploy-kit",
   "version": "2.1.2",
   "description": "支持 ftp, sftp 等多种文件传输方式的文件部署工具。可以单独使用，也可以与 webpack, gulp 等工具集成，已内置 webpack, gulp 插件",
-  "scripts": {},
+  "main": "lib/index.js",
+  "bin": {
+    "deploy": "bin/deploy.js"
+  },
   "repository": "git+https://github.com/xiaoyann/deploy-kit.git",
   "keywords": [
     "deploy",
@@ -10,7 +13,8 @@
     "webpack",
     "scp2",
     "sftp",
-    "upload"
+    "upload",
+    "bin"
   ],
   "files": [
     "lib",
@@ -25,6 +29,7 @@
   "dependencies": {
     "async": "^2.5.0",
     "chalk": "^2.0.1",
+    "commander": "^2.11.0",
     "ftp": "^0.3.10",
     "glob": "^7.1.2",
     "minimatch": "^3.0.4",
