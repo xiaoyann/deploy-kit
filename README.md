@@ -2,17 +2,15 @@
 
 A nice deployment tool supports ftp and sftp. Used directly or with built-in plugins, such as webpack-plugin.
 
+![image](./pic.png)
 
 ```
 yarn add deploy-kit --dev
 ```
 
-![image](./pic.png)
-
-
 ## basic usage
 
-```
+```js
 const client = require('deploy-kit')
 
 client = client.sftp({
@@ -78,7 +76,7 @@ client.upload()
 
 you can use configuration file instead of cli args. Just create a `deploy.js` file in the root directory of you project and exports your configuration like this:
 
-```
+```js
 module.exports = {
   server: '',
   workspace: '',
@@ -102,7 +100,7 @@ If you prefer to place the configuration file in another place, you can use `-c,
 
 ## used with webpack plugin
 
-```
+```js
 const deployConfig = require('./deploy.js')
 const DeployPlugin = require('deploy-kit/plugins/webpack-plugin')
 
