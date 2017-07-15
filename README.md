@@ -13,7 +13,7 @@ yarn add deploy-kit --dev
 ```js
 const client = require('deploy-kit')
 
-client = client.sftp({
+client.sftp({
   // sever account, address, port
   server: 'user:pwd@10.133.3.4:22',
   // deploy all files in the directory
@@ -37,8 +37,7 @@ client = client.sftp({
     }
   ]
 })
-
-client.upload()
+.upload()
 ```
 
 #### options:
