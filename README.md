@@ -120,17 +120,39 @@ If you prefer to place the configuration file in another place, you can use `-c,
 ./bin/deploy --config ./config/your_conf.js
 ```
 
-## used with webpack plugin
+## Used with plugins
+
+each plugin can called like this:
 
 ```js
-const deployConfig = require('./deploy.js')
+new DeployPlugin([config])
+```
+
+`config` is optional. if you omitted the `config`, Deploy-kit will automatic load the `deploy.js` from the `process.cwd()`.
+
+
+* sftp-webpack-plugin
+
+
+
+```js
 const DeployPlugin = require('deploy-kit/plugins/webpack-plugin')
 
 // webpack configuration
 moudle.exports = {
   ...
   plugins: [
-    new DeployPlugin(deployConfig)
+    new DeployPlugin()
   ]
 }
 ```
+> todos:
+
+* ftp-webpack-plugin
+* sftp-gulp-plugin
+* ftp-gulp-plugin
+* sftp-fis-plugin
+
+## How to write a plugin
+
+> todo
