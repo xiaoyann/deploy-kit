@@ -1,6 +1,6 @@
 const client = require('../lib')
 const inherits = require('util').inherits
-const DeployPlugin = require('../lib/util').DeployPlugin
+const DeployPlugin = require('./webpack-plugin')
 
 inherits(SftpDeployPlugin, DeployPlugin)
 
