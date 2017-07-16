@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const path = require('path')
 const fs = require('fs')
 const program = require('commander')
@@ -105,6 +103,4 @@ Object.assign(config, readConfig())
   }
 })
 
-
-// start deploy
-client.sftp(config).upload()
+module.exports = config
