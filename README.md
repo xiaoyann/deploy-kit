@@ -147,7 +147,7 @@ new DeployPlugin([config])
 
 
 ```js
-const DeployPlugin = require('deploy-kit/plugins/webpack-plugin')
+const DeployPlugin = require('deploy-kit/plugins/sftp-webpack-plugin')
 
 // webpack configuration
 moudle.exports = {
