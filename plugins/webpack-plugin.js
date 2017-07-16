@@ -14,7 +14,7 @@ DeployPlugin.prototype.apply = function(compiler) {
         stats: {}
       }
     })
-    self.client.upload(files)
+    self.client.exec(files)
   })
 }
 

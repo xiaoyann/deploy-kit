@@ -37,7 +37,16 @@ client.sftp({
     }
   ]
 })
-.upload()
+.exec()
+```
+
+or use ftp
+
+```js
+client.ftp({
+  ...
+})
+.exec()
 ```
 
 #### options:
@@ -66,13 +75,17 @@ rules | array of rule | rule use to speicify different place for each file. each
 ## Command Line Interface(CLI)
 
 ```
-./bin/deploy --server user:pwd@server_address:port --ignore **/*.map ./dist /data1/htdocs/testapp
+$ ./bin/deploy-sftp --server user:pwd@server_address:port --ignore **/*.map ./dist /data1/htdocs/testapp
+```
+
+```
+$ ./bin/deploy-ftp ...
 ```
 
 #### cli options:
 ```
 
-  Usage: deploy [options] [workspace] [deployTo]
+  Usage: deploy-sftp [options] [workspace] [deployTo]
 
 
   Options:
@@ -86,11 +99,11 @@ rules | array of rule | rule use to speicify different place for each file. each
   Examples:
 
     // use configuration from a file
-    $ deploy --config deploy.js
+    $ deploy-sftp --config deploy.js
     // deploy files in ./dist to /data1/htdocs/testapp on 10.13.1.2
-    $ deploy -s user:pwd@10.13.1.2:22 --i *.map ./dist /data1/htdocs/testapp
+    $ deploy-sftp -s user:pwd@10.13.1.2:22 --i *.map ./dist /data1/htdocs/testapp
 
-  version: 2.1.2
+  version: 3.1.0
 ```
 
 #### using config file
@@ -110,13 +123,13 @@ module.exports = {
 Runing directly without any arg.
 
 ```
-./bin/deploy
+./bin/deploy-sftp
 ```
 
 If you prefer to place the configuration file in another place, you can use `-c, --config <path>` option like this:
 
 ```
-./bin/deploy --config ./config/your_conf.js
+./bin/deploy-sftp --config ./config/your_conf.js
 ```
 
 ## Used with plugins

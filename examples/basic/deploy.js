@@ -16,6 +16,6 @@ client.sftp({
     }
   ]
 })
-.upload()
+.exec()
 
 
