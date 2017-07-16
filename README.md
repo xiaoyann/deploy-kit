@@ -123,13 +123,13 @@ module.exports = {
 Runing directly without any arg.
 
 ```
-./bin/deploy-sftp
+$ ./bin/deploy-sftp
 ```
 
 If you prefer to place the configuration file in another place, you can use `-c, --config <path>` option like this:
 
 ```
-./bin/deploy-sftp --config ./config/your_conf.js
+$ ./bin/deploy-sftp --config ./config/your_conf.js
 ```
 
 ## Used with plugins
