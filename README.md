@@ -146,7 +146,6 @@ new DeployPlugin([config])
 * sftp-webpack-plugin
 
 
-
 ```js
 const DeployPlugin = require('deploy-kit/plugins/webpack-plugin')
 
@@ -160,7 +159,6 @@ moudle.exports = {
 ```
 > todos:
 
-* ftp-webpack-plugin
 * sftp-gulp-plugin
 * ftp-gulp-plugin
 * sftp-fis-plugin
