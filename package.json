@@ -1,22 +1,22 @@
 {
   "name": "deploy-kit",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "A nice deployment tool supports ftp and sftp. Used directly or with built-in plugins, such as webpack-plugin.",
   "main": "lib/index.js",
   "bin": {
-    "deploy": "bin/deploy"
+    "deploy-ftp": "bin/deploy-ftp",
+    "deploy-sftp": "bin/deploy-sftp"
   },
   "repository": "git+https://github.com/xiaoyann/deploy-kit.git",
   "keywords": [
     "deploy",
     "ftp",
     "webpack",
-    "scp2",
     "sftp",
-    "upload",
-    "bin"
+    "upload"
   ],
   "files": [
+    "bin",
     "lib",
     "plugins"
   ],
