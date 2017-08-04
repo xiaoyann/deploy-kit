@@ -1,6 +1,6 @@
 {
   "name": "deploy-kit",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "A nice deployment tool supports ftp and sftp. Used directly or with built-in plugins, such as webpack-plugin.",
   "main": "lib/index.js",
   "bin": {
